@@ -1,0 +1,14 @@
+const routes = [
+  {
+    path: '/about/',
+    name: 'about',
+    component: () => import('@/views/Abort.vue'),
+  },
+  {
+    path: '/',
+    name: 'home',
+    component: () => import('@/views/Home.vue'),
+  }
+  
+];
+export default routes;

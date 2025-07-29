@@ -1,5 +1,5 @@
 {
-  "name": "webpack-vue-with-qp",
+  "name": "qiankun-webpack-vue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
