@@ -1,19 +1,21 @@
 import './public-path';
 import Vue from 'vue'
 import VueRouter from 'vue-router';
+import routes from './router';
 import App from './App.vue'
 
 Vue.config.productionTip = false
 
 let router = null;
 let instance = null;
+
 function render(props = {}) {
   const { container } = props;
-  // router = new VueRouter({
-  //   base: window.__POWERED_BY_QIANKUN__ ? '/app-vue/' : '/',
-  //   mode: 'history',
-  //   routes,
-  // });
+  router = new VueRouter({
+    base: window.__POWERED_BY_QIANKUN__ ? '/microapps/qiankun-webpack-vue/' : '/',
+    mode: 'history',
+    routes,
+  });
 
   instance = new Vue({
     router,
