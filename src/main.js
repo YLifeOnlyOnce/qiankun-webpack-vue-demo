@@ -5,14 +5,16 @@ import routes from './router';
 import App from './App.vue'
 
 Vue.config.productionTip = false
+Vue.use(VueRouter);
+
 
 let router = null;
 let instance = null;
 
 function render(props = {}) {
-  const { container } = props;
+  const { container, name } = props;
   router = new VueRouter({
-    base: window.__POWERED_BY_QIANKUN__ ? '/microapps/qiankun-webpack-vue/' : '/',
+    base: window.__POWERED_BY_QIANKUN__ ? `/${name}` : '/',
     mode: 'history',
     routes,
   });
