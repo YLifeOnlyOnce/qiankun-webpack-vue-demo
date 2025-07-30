@@ -6,7 +6,7 @@ function resolve(dir) {
 }
 
 module.exports = {
-  publicPath:'/microapps/qiankun-webpack-vue/',
+  publicPath: process.env.BASE_URL,
   outputDir: 'dist',
   assetsDir: 'static',
   filenameHashing: true,
