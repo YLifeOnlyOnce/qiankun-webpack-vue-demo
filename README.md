@@ -81,6 +81,8 @@ module.exports = {
 
 微应用需要在自己的入口 js (通常就是你配置的 webpack 的 entry js) 导出 bootstrap、mount、unmount 三个生命周期钩子，以供主应用在适当的时机调用。
 
+同时需要处理 vue router 的 basepath 使得在微应用框架下可正常层级跳转
+
 ```javascript
 // 当前为默认的 main.js 入口文件
 import './public-path.js'; // 置于最顶部
@@ -151,5 +153,4 @@ function render(){
 
 window.__POWERED_BY_QIANKUN__ ? qiankunRender() : render();
 ```
-
 
