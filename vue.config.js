@@ -6,18 +6,9 @@ function resolve(dir) {
 }
 
 module.exports = {
-  publicPath: process.env.BASE_URL || '/',
-  outputDir: 'dist',
-  assetsDir: 'static',
-  filenameHashing: true,
+  publicPath: `/microapps/${name}`,
   devServer: {
-    hot: true,
-    disableHostCheck: true,
-    port: process.env.VUE_APP_PORT,
-    overlay: {
-      warnings: false,
-      errors: true,
-    },
+    // 因为qiankun内部请求都是fetch来请求资源，所以子应用必须允许跨域
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
